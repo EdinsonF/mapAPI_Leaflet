@@ -1,0 +1,72 @@
+[
+    {
+         "id" : 1,
+         "direccion" : "Cl. 93a # 12-35, Bogotá",
+         "longitud" : "-74.0486991",
+         "latitud" : "4.676199",
+         "razonsocial" : "Home Burgers"
+    },
+    {
+        "id" : 2,
+        "direccion" : "Cl. 93 #11A-11, Bogotá",
+        "longitud" : "-74.0484915",
+        "latitud" : "4.6747984",
+        "razonsocial" : "La Taqueria"
+   },
+   {
+    "id" : 3,
+    "direccion" : "Cl. 93a # 13-25, Bogotá",
+    "longitud" : "-74.0496233",
+    "latitud" : "4.6770101",
+    "razonsocial" : "La Fabrica"
+    },
+    {
+     "id" : 4,
+     "direccion" : "Cra. 13 #93-63, Bogotá",
+     "longitud" : "-74.04949",
+     "latitud" : "4.6764259",
+     "razonsocial" : "Teriyaki"
+     },
+     {
+      "id" : 5,
+      "direccion" : "Ak. 15 # 90-44, Bogotá",
+      "longitud" : "-74.0530111",
+      "latitud" : "4.6748286",
+      "razonsocial" : "Alitas Colombiana"
+      },
+      {
+       "id" : 6,
+       "direccion" : "Cl. 90 #18, Bogotá",
+       "longitud" : "-74.055154",
+       "latitud" : "4.675415",
+       "razonsocial" : "Papa John's"
+       },
+       {
+        "id" : 7,
+        "direccion" : "Ak. 15 # 86a 54, Bogotá",
+        "longitud" : "-74.054278",
+        "latitud" : "4.671767",
+        "razonsocial" : "Kairos"
+        },
+        {
+         "id" : 8,
+         "direccion" : "Ac. 85 #19-50, Bogotá",
+         "longitud" : "-74.057771",
+         "latitud" : "4.671572",
+         "razonsocial" : "Zátar"
+         },
+         {
+          "id" : 9,
+          "direccion" : "Ac. 85 #1213, Bogotá",
+          "longitud" : "-74.052726",
+          "latitud" : "4.668506",
+          "razonsocial" : "La Xarcuteria"
+          },
+          {
+           "id" : 10,
+           "direccion" : "Ac. 82 # 11-42, Bogotá",
+           "longitud" : "-74.052458",
+           "latitud" : "4.667310",
+           "razonsocial" : "Starbucks"
+           }
+]
