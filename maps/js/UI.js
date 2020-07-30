@@ -12,7 +12,7 @@ class UI {
 
     inicializarMapa() {
          // Inicializar y obtener la propiedad del mapa
-         const map = L.map('mapa').setView([4.671572, -74.05777], 14);
+         const map = L.map('mapa').setView([4.671572, -74.05777], 6);
          const enlaceMapa = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
          L.tileLayer(
              'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -26,6 +26,7 @@ class UI {
     async montrarEstablecimientos(){
         const datos = await this.api.consultarDatos()
 
+        
         const resultado = datos.respuestaJSON;
             
         this.mostrarPines(resultado);
@@ -36,14 +37,16 @@ class UI {
         this.markers.clearLayers();
 
         datos.forEach(dato => {
-            const {direccion, longitud, latitud, razonsocial} = dato;
+
+            console.log(dato);
+            const {direccion, ciudad, location} = dato;
             //monstrat globo de informacion sobre cada pin
             const opcionPopup = new L.popup()
-                .setContent(`<p><h4><b>${razonsocial}</b></h4></p>
+                .setContent(`<p><h4><b>${ciudad}</b></h4></p>
                              <p><b>Dirección:</b> ${direccion}</p>`);
             const marker = new L.marker([
-                parseFloat(latitud),
-                parseFloat(longitud)
+                parseFloat(location.latitude),
+                parseFloat(location.longitude)
             ]).bindPopup(opcionPopup);
             this.markers.addLayer(marker);
         });
