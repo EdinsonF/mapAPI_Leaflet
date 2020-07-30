@@ -38,7 +38,7 @@ class UI {
 
         datos.forEach(dato => {
 
-            console.log(dato);
+            
             const {direccion, ciudad, location} = dato;
             //monstrat globo de informacion sobre cada pin
             const opcionPopup = new L.popup()
@@ -53,5 +53,23 @@ class UI {
 
         //agregamos al mapa
         this.markers.addTo(this.mapa);
+    }
+
+    //armando filtro
+    async armarFiltro(filtro){
+        const datos = await this.api.consultarDatos()
+
+        const resultado = datos.respuestaJSON;
+        //pasamos la busqueda y el resultado para el filtro
+        this.filtrarResultados(resultado, filtro);
+    }
+
+    //filtrando y mostrnado pines
+    filtrarResultados(resultados, busqueda){
+        //filtado con .filter
+        const filtro = resultados.filter(filtro => filtro.ciudad.indexOf(busqueda) !== -1); //dirente a -1 se trae los q concuerdan
+        //mostrando pines por filtro
+        //console.log(filtro);
+        this.mostrarPines(filtro);
     }
 }
